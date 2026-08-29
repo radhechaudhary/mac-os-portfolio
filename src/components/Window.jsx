@@ -52,24 +52,31 @@ export default function Window({
   const handleMaximize = (e) => {
     e.stopPropagation();
     sounds.playClick();
-    setIsMaximized(!isMaximized);
+    setIsMaximized(prev => !prev);
   };
 
   const isLight = theme === 'light';
 
-  // Calculate window dimensions and positions
-  const windowWidth = isMaximized ? 'calc(100vw - 20px)' : defaultSize.width;
-  const windowHeight = isMaximized ? 'calc(100vh - 55px)' : defaultSize.height;
+  // Calculate window dimensions and positions centered on screen
+  const screenW = typeof window !== 'undefined' ? window.innerWidth : 1200;
+  const screenH = typeof window !== 'undefined' ? window.innerHeight : 800;
 
-  const posX = isMaximized ? 10 : (defaultPosition?.x !== undefined ? defaultPosition.x : centerPos.x);
-  const posY = isMaximized ? 38 : (defaultPosition?.y !== undefined ? defaultPosition.y : centerPos.y);
+  const normalWidth = Math.min(defaultSize.width, screenW - 32);
+  const normalHeight = Math.min(defaultSize.height, screenH - 100);
+
+  const windowWidth = isMaximized ? 'calc(100vw - 24px)' : normalWidth;
+  const windowHeight = isMaximized ? 'calc(100vh - 108px)' : normalHeight;
+
+  const posX = isMaximized ? 12 : (defaultPosition?.x !== undefined ? defaultPosition.x : Math.max(16, (screenW - normalWidth) / 2));
+  const posY = isMaximized ? 38 : (defaultPosition?.y !== undefined ? defaultPosition.y : Math.max(45, (screenH - normalHeight) / 2 - 15));
 
   return (
     <motion.div
-      initial={{ scale: 0.92, opacity: 0, y: 15 }}
-      animate={{ scale: 1, opacity: 1, y: 0 }}
-      exit={{ scale: 0.85, opacity: 0, y: 25 }}
-      transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+      key={`${id}-${isMaximized ? 'max' : 'norm'}`}
+      initial={{ scale: 0.9, opacity: 0, y: 20 }}
+      animate={{ scale: 1, opacity: 1, x: 0, y: 0 }}
+      exit={{ scale: 0.45, opacity: 0, y: 300, filter: 'blur(8px)' }}
+      transition={{ type: 'spring', damping: 24, stiffness: 320 }}
       drag={!isMaximized}
       dragControls={dragControls}
       dragListener={false}

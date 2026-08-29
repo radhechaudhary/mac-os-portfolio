@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import {
   Sparkles,
   User,
@@ -27,6 +28,7 @@ import TerminalApp from './apps/TerminalApp';
 import SettingsApp from './apps/SettingsApp';
 import SafariApp from './apps/SafariApp';
 import ResumeApp from './apps/ResumeApp';
+import LeetCodeApp from './apps/LeetCodeApp';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { sounds } from '../utils/sound';
 
@@ -109,6 +111,8 @@ export default function Desktop({
         );
       case 'safari':
         return <SafariApp theme={theme} />;
+      case 'leetcode':
+        return <LeetCodeApp theme={theme} />;
       case 'resume':
         return <ResumeApp theme={theme} />;
       default:
@@ -223,41 +227,43 @@ export default function Desktop({
         </div>
       </div>
 
-      {/* Render Active Windows */}
-      {apps.map((app) => {
-        const isOpen = openAppIds.includes(app.id);
-        const isMinimized = minimizedApps.includes(app.id);
-        if (!isOpen || isMinimized) return null;
+      {/* Render Active Windows with smooth exit & minimize transitions */}
+      <AnimatePresence>
+        {apps.map((app) => {
+          const isOpen = openAppIds.includes(app.id);
+          const isMinimized = minimizedApps.includes(app.id);
+          if (!isOpen || isMinimized) return null;
 
-        const isActive = activeAppId === app.id;
-        const zIndex = windowZIndexes[app.id] || 10;
+          const isActive = activeAppId === app.id;
+          const zIndex = windowZIndexes[app.id] || 10;
 
-        const isIconImage = typeof app.icon === 'string';
-        const windowIcon = isIconImage ? (
-          <img src={app.icon} alt={app.title} className="w-4 h-4 object-contain inline-block" />
-        ) : (
-          app.icon
-        );
+          const isIconImage = typeof app.icon === 'string';
+          const windowIcon = isIconImage ? (
+            <img src={app.icon} alt={app.title} className="w-4 h-4 object-contain inline-block" />
+          ) : (
+            app.icon
+          );
 
-        return (
-          <Window
-            key={app.id}
-            id={app.id}
-            title={app.title}
-            icon={windowIcon}
-            isActive={isActive}
-            zIndex={zIndex}
-            theme={theme}
-            defaultPosition={app.defaultPosition}
-            defaultSize={app.defaultSize}
-            onFocus={onFocusApp}
-            onClose={onCloseApp}
-            onMinimize={onMinimizeApp}
-          >
-            {renderAppContent(app.id)}
-          </Window>
-        );
-      })}
+          return (
+            <Window
+              key={app.id}
+              id={app.id}
+              title={app.title}
+              icon={windowIcon}
+              isActive={isActive}
+              zIndex={zIndex}
+              theme={theme}
+              defaultPosition={app.defaultPosition}
+              defaultSize={app.defaultSize}
+              onFocus={onFocusApp}
+              onClose={onCloseApp}
+              onMinimize={onMinimizeApp}
+            >
+              {renderAppContent(app.id)}
+            </Window>
+          );
+        })}
+      </AnimatePresence>
     </div>
   );
 }

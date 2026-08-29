@@ -77,6 +77,13 @@ export default function App() {
       defaultSize: { width: 1040, height: 680 }
     },
     {
+      id: 'leetcode',
+      title: 'LeetCode',
+      icon: "./assets/leetcode.svg",
+      color: 'from-amber-500 via-orange-500 to-yellow-600',
+      defaultSize: { width: 1020, height: 680 }
+    },
+    {
       id: 'resume',
       title: 'Resume.pdf',
       icon: "../../assets/pdf.png",

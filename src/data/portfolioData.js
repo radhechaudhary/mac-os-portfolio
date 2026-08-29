@@ -205,5 +205,56 @@ export const PORTFOLIO_DATA = {
       url: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80",
       previewGradient: "from-slate-800 via-slate-900 to-black"
     }
-  ]
+  ],
+
+  leetcode: {
+    username: "Mohit_Chaudhary_2004",
+    name: "Mohit Chaudhary",
+    avatar: "./assets/image.jpeg",
+    ranking: 36696,
+    topPercentage: "Top 6.8%",
+    totalSolved: 976,
+    totalQuestions: 4033,
+    easySolved: 337,
+    totalEasy: 961,
+    mediumSolved: 530,
+    totalMedium: 2105,
+    hardSolved: 109,
+    totalHard: 967,
+    acceptanceRate: "60.66%",
+    contributionPoints: 1840,
+    reputation: 82,
+    contestRating: 1837,
+    globalRanking: "58,964/879,441",
+    attendedContests: 25,
+    streak: 83,
+    activeDays: 312,
+    profileUrl: "https://leetcode.com/u/Mohit_Chaudhary_2004/",
+    badges: [
+      { id: "b1", title: "50 Days Badge 2026", icon: "🏅", category: "Daily Challenge", date: "march 2026", color: "from-amber-400 to-yellow-600" },
+      { id: "b2", title: "100 Days Badge 2026", icon: "🏆", category: "Daily Challenge", date: "april 2026", color: "from-orange-500 to-amber-600" },
+      { id: "b2", title: "200 Days Badge 2026", icon: "🏆", category: "Daily Challenge", date: "August 2026", color: "from-orange-500 to-amber-600" },
+      { id: "b2", title: "365 Days Badge", icon: "🏆", category: "Daily Challenge", date: "June 2026", color: "from-orange-500 to-amber-600" },
+      { id: "b3", title: "Knight Badge", icon: "⚔️", category: "Contest Rating 1785+", date: "Jan 2025", color: "from-purple-500 to-indigo-600" },
+    ],
+    skills: [
+      { name: "Dynamic Programming", count: 84, level: "Advanced" },
+      { name: "Graphs & BFS/DFS", count: 72, level: "Advanced" },
+      { name: "Trees & Binary Trees", count: 68, level: "Expert" },
+      { name: "Arrays & Two Pointers", count: 110, level: "Expert" },
+      { name: "Sliding Window", count: 45, level: "Advanced" },
+      { name: "Greedy & Binary Search", count: 52, level: "Intermediate" },
+      { name: "Heap & Priority Queue", count: 34, level: "Advanced" },
+      { name: "Trie & Disjoint Set", count: 20, level: "Intermediate" }
+    ],
+    recentSubmissions: [
+      { id: 1, title: "Course Schedule II", difficulty: "Medium", status: "Accepted", lang: "C++", time: "2 hours ago", runtime: "12ms (Beat 94%)" },
+      { id: 2, title: "Trapping Rain Water", difficulty: "Hard", status: "Accepted", lang: "Java", time: "1 day ago", runtime: "2ms (Beat 98%)" },
+      { id: 3, title: "Longest Substring Without Repeating Characters", difficulty: "Medium", status: "Accepted", lang: "JavaScript", time: "2 days ago", runtime: "64ms (Beat 89%)" },
+      { id: 4, title: "Median of Two Sorted Arrays", difficulty: "Hard", status: "Accepted", lang: "C++", time: "3 days ago", runtime: "16ms (Beat 92%)" },
+      { id: 5, title: "Number of Islands", difficulty: "Medium", status: "Accepted", lang: "Python3", time: "4 days ago", runtime: "210ms (Beat 86%)" },
+      { id: 6, title: "Valid Parentheses", difficulty: "Easy", status: "Accepted", lang: "JavaScript", time: "5 days ago", runtime: "48ms (Beat 96%)" }
+    ]
+  }
 };
+

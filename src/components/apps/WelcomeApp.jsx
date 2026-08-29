@@ -8,7 +8,8 @@ import {
   Compass, 
   Code2, 
   CheckCircle2, 
-  ExternalLink
+  ExternalLink,
+  Trophy
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../SocialIcons';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
@@ -69,15 +70,26 @@ export default function WelcomeApp({ onOpenApp }) {
       {/* Quick Launch Shortcuts Grid */}
       <div>
         <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Explore Quick Apps</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           <QuickCard 
             title="Projects & Work" 
-            desc="Explore interactive apps & repos" 
+            desc="Explore apps & repos" 
             icon={<FolderGit2 className="w-5 h-5 text-blue-400" />}
             bgColor="bg-blue-500/10 hover:bg-blue-500/20 border-blue-500/30"
             onClick={() => {
               sounds.playClick();
               onOpenApp('projects');
+            }}
+          />
+
+          <QuickCard 
+            title="LeetCode Profile" 
+            desc="Stats & achievements" 
+            icon={<Trophy className="w-5 h-5 text-amber-400" />}
+            bgColor="bg-amber-500/10 hover:bg-amber-500/20 border-amber-500/30"
+            onClick={() => {
+              sounds.playClick();
+              onOpenApp('leetcode');
             }}
           />
 
@@ -95,8 +107,8 @@ export default function WelcomeApp({ onOpenApp }) {
           <QuickCard 
             title="Experience" 
             desc="Career journey timeline" 
-            icon={<Compass className="w-5 h-5 text-amber-400" />}
-            bgColor="bg-amber-500/10 hover:bg-amber-500/20 border-amber-500/30"
+            icon={<Compass className="w-5 h-5 text-orange-400" />}
+            bgColor="bg-orange-500/10 hover:bg-orange-500/20 border-orange-500/30"
             onClick={() => {
               sounds.playClick();
               onOpenApp('journey');
@@ -105,7 +117,7 @@ export default function WelcomeApp({ onOpenApp }) {
 
           <QuickCard 
             title="Terminal CLI" 
-            desc="Interactive command prompt" 
+            desc="Interactive shell" 
             icon={<Terminal className="w-5 h-5 text-emerald-400" />}
             bgColor="bg-emerald-500/10 hover:bg-emerald-500/20 border-emerald-500/30"
             onClick={() => {

@@ -33,6 +33,7 @@ export default function TerminalApp({ onOpenApp, onSetWallpaper }) {
   whoami      - Print developer summary bio
   skills      - List core engineering skill competencies
   projects    - List portfolio projects & repositories
+  leetcode    - View LeetCode profile achievements & stats 🏆
   journey     - Print career timeline & experience
   education   - View academic degrees & honors
   contact     - Display contact details & social links
@@ -54,6 +55,13 @@ export default function TerminalApp({ onOpenApp, onSetWallpaper }) {
         const projectList = projects.map(p => `  • ${p.title} (${p.category}): ${p.tagline}`).join('\n');
         newHistory.push({ type: 'output', text: `Featured Projects:\n${projectList}` });
         if (onOpenApp) onOpenApp('projects');
+      } else if (command === 'leetcode') {
+        const lc = PORTFOLIO_DATA.leetcode;
+        newHistory.push({
+          type: 'output',
+          text: `LeetCode Profile Statistics (@${lc.username}):\n  • Solved: ${lc.totalSolved} (Easy: ${lc.easySolved}, Med: ${lc.mediumSolved}, Hard: ${lc.hardSolved})\n  • Contest Rating: ${lc.contestRating} (Knight Status, Top 4.2%)\n  • Acceptance Rate: ${lc.acceptanceRate}\n  • Streak: ${lc.streak} days\nOpening LeetCode application...`
+        });
+        if (onOpenApp) onOpenApp('leetcode');
       } else if (command === 'journey') {
         const jList = journey.map(j => `  • ${j.period}: ${j.role} at ${j.company}`).join('\n');
         newHistory.push({ type: 'output', text: `Career Journey:\n${jList}` });
