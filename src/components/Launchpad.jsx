@@ -6,7 +6,7 @@ import { sounds } from '../utils/sound';
 export default function Launchpad({ apps, onOpenApp, onClose }) {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredApps = apps.filter(app => 
+  const filteredApps = apps.filter(app =>
     app.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -54,9 +54,7 @@ export default function Launchpad({ apps, onOpenApp, onClose }) {
             className="flex flex-col items-center space-y-2 group focus:outline-none"
           >
             <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr ${app.color} text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-200 ring-1 ring-white/20`}>
-              <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center">
-                {app.icon}
-              </div>
+              <img src={app.icon} alt={app.title} className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center" />
             </div>
             <span className="text-xs font-semibold text-white group-hover:text-blue-300 transition-colors">
               {app.title}

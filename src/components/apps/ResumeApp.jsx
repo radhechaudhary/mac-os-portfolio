@@ -1,11 +1,10 @@
 import React from 'react';
 import { FileText, Download, ExternalLink, Printer, Sparkles } from 'lucide-react';
-import resumePdf from '../../../assets/resume.pdf';
 import { sounds } from '../../utils/sound';
 
 export default function ResumeApp({ theme }) {
   const isLight = theme === 'light';
-  const pdfUrl = resumePdf || '/resume.pdf';
+  const pdfUrl = './assets/resume.pdf';
 
   const handlePrint = () => {
     sounds.playClick();
@@ -19,9 +18,8 @@ export default function ResumeApp({ theme }) {
   return (
     <div className={`h-full flex flex-col transition-colors ${isLight ? 'text-slate-900' : 'text-slate-100'}`}>
       {/* Top PDF Controls Bar */}
-      <div className={`flex items-center justify-between p-3 rounded-xl border mb-3 shadow-sm ${
-        isLight ? 'bg-slate-200/80 border-black/10' : 'bg-slate-800/80 border-white/10'
-      }`}>
+      <div className={`flex items-center justify-between p-3 rounded-xl border mb-3 shadow-sm ${isLight ? 'bg-slate-200/80 border-black/10' : 'bg-slate-800/80 border-white/10'
+        }`}>
         <div className="flex items-center space-x-2.5">
           <div className="p-2 rounded-lg bg-rose-500/20 text-rose-500">
             <FileText className="w-5 h-5" />
@@ -40,7 +38,7 @@ export default function ResumeApp({ theme }) {
           >
             <Printer className="w-4 h-4" /> <span className="hidden sm:inline">Print</span>
           </button>
-          
+
           <a
             href={pdfUrl}
             target="_blank"

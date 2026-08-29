@@ -16,63 +16,63 @@ export default function App() {
     {
       id: 'welcome',
       title: 'Welcome.app',
-      icon: "../../assets/welcome.png",
+      icon: "./assets/welcome.png",
       color: 'from-amber-500 via-orange-500 to-rose-500',
       defaultSize: { width: 980, height: 640 }
     },
     {
       id: 'about',
       title: 'About Me',
-      icon: "../../assets/person.png",
+      icon: "./assets/person.png",
       color: 'from-blue-600 via-indigo-600 to-purple-600',
       defaultSize: { width: 960, height: 640 }
     },
     {
       id: 'projects',
       title: 'Projects',
-      icon: "../../assets/git.png",
+      icon: "./assets/git.png",
       color: 'from-cyan-500 via-blue-600 to-indigo-700',
       defaultSize: { width: 1040, height: 680 }
     },
     {
       id: 'journey',
       title: 'Experience',
-      icon: "../../assets/maps.png",
+      icon: "./assets/maps.png",
       color: 'from-amber-500 via-orange-600 to-red-600',
       defaultSize: { width: 980, height: 650 }
     },
     {
       id: 'education',
       title: 'Education',
-      icon: "../../assets/education.png",
+      icon: "./assets/graduation-cap.png",
       color: 'from-emerald-600 via-teal-600 to-cyan-700',
       defaultSize: { width: 940, height: 620 }
     },
     {
       id: 'contact',
       title: 'Contact Me',
-      icon: "../../assets/mail.png",
+      icon: "./assets/mail.png",
       color: 'from-rose-500 via-pink-600 to-purple-600',
       defaultSize: { width: 940, height: 620 }
     },
     {
       id: 'terminal',
       title: 'Terminal',
-      icon: "../../assets/terminal.png",
+      icon: "./assets/terminal.png",
       color: 'from-slate-800 via-slate-900 to-black',
       defaultSize: { width: 900, height: 560 }
     },
     {
       id: 'settings',
       title: 'System Settings',
-      icon: "../../assets/settings.png",
+      icon: "./assets/settings.png",
       color: 'from-slate-600 via-slate-700 to-slate-800',
       defaultSize: { width: 900, height: 600 }
     },
     {
       id: 'safari',
       title: 'Safari',
-      icon: "../../assets/safari.png",
+      icon: "./assets/safari.png",
       color: 'from-sky-500 via-blue-600 to-indigo-700',
       defaultSize: { width: 1040, height: 680 }
     },
