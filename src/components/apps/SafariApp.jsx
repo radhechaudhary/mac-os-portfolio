@@ -17,7 +17,7 @@ export default function SafariApp() {
         </div>
 
         {/* URL Bar */}
-        <div className="flex-1 flex items-center space-x-2 px-3 py-1 rounded-lg bg-slate-950 border border-white/10 text-slate-300">
+        <div className="liquid-glass-well flex-1 flex items-center space-x-2 px-3 py-1 rounded-lg text-slate-300">
           <Lock className="w-3 h-3 text-emerald-400" />
           <input
             type="text"
@@ -42,7 +42,7 @@ export default function SafariApp() {
           Live embedded web app preview frame. Experience full-stack React, Next.js, and AI web applications engineered by Alex Morgan.
         </p>
 
-        <div className="p-4 rounded-xl bg-slate-950/80 border border-white/10 text-left w-full max-w-md space-y-2 font-mono text-xs">
+        <div className="liquid-glass-well p-4 rounded-xl text-left w-full max-w-md space-y-2 font-mono text-xs">
           <div className="text-emerald-400 font-bold">✓ SSL Certificate Secured</div>
           <div className="text-slate-400">Response time: 42ms</div>
           <div className="text-slate-400">Server: Edge Vercel / Cloudflare</div>

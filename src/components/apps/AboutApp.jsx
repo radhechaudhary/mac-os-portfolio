@@ -29,7 +29,7 @@ export default function AboutApp() {
   return (
     <div className="space-y-6 text-slate-100 p-2 select-text">
       {/* Header Profile Section */}
-      <div className="flex flex-col md:flex-row items-center gap-6 p-6 rounded-2xl bg-slate-800/80 border border-white/10 shadow-xl">
+      <div className="liquid-glass-card flex flex-col md:flex-row items-center gap-6 p-6 rounded-2xl">
         <img
           src={personal.avatar}
           alt={personal.name}
@@ -49,7 +49,7 @@ export default function AboutApp() {
       </div>
 
       {/* Skills Matrix Section */}
-      <div className="bg-slate-800/50 rounded-2xl p-5 border border-white/10 shadow-lg">
+      <div className="liquid-glass-card rounded-2xl p-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
           <div>
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
@@ -60,7 +60,7 @@ export default function AboutApp() {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex items-center space-x-1 bg-slate-900/60 p-1 rounded-xl border border-white/10">
+          <div className="liquid-glass-well flex items-center space-x-1 p-1 rounded-xl">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -82,7 +82,7 @@ export default function AboutApp() {
         {/* Skill Progress Bars */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {filteredSkills.map((skill, index) => (
-            <div key={index} className="p-3 rounded-xl bg-slate-900/60 border border-white/5 space-y-2">
+            <div key={index} className="liquid-glass-well p-3 rounded-xl space-y-2">
               <div className="flex items-center justify-between text-xs font-semibold">
                 <span className="text-slate-200">{skill.name}</span>
                 <span className="text-blue-400">{skill.level}%</span>
@@ -100,7 +100,7 @@ export default function AboutApp() {
 
       {/* Core Principles & Interests Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-4 rounded-xl bg-slate-800/40 border border-white/10 space-y-2">
+        <div className="liquid-glass-card p-4 rounded-xl space-y-2">
           <div className="p-2 rounded-lg bg-blue-500/20 text-blue-400 w-fit">
             <Sparkles className="w-5 h-5" />
           </div>
@@ -110,7 +110,7 @@ export default function AboutApp() {
           </p>
         </div>
 
-        <div className="p-4 rounded-xl bg-slate-800/40 border border-white/10 space-y-2">
+        <div className="liquid-glass-card p-4 rounded-xl space-y-2">
           <div className="p-2 rounded-lg bg-purple-500/20 text-purple-400 w-fit">
             <Server className="w-5 h-5" />
           </div>
@@ -120,7 +120,7 @@ export default function AboutApp() {
           </p>
         </div>
 
-        <div className="p-4 rounded-xl bg-slate-800/40 border border-white/10 space-y-2">
+        <div className="liquid-glass-card p-4 rounded-xl space-y-2">
           <div className="p-2 rounded-lg bg-emerald-500/20 text-emerald-400 w-fit">
             <Coffee className="w-5 h-5" />
           </div>

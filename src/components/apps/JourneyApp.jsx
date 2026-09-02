@@ -28,7 +28,7 @@ export default function JourneyApp() {
   return (
     <div className="space-y-6 text-slate-100 p-2 select-text">
       {/* Header Banner */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-slate-800/80 border border-white/10 shadow-lg">
+      <div className="liquid-glass-card flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl">
         <div>
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <Briefcase className="w-5 h-5 text-amber-400" />
@@ -57,7 +57,7 @@ export default function JourneyApp() {
             </div>
 
             {/* Timeline Item Card */}
-            <div className="p-5 rounded-2xl bg-slate-800/60 border border-white/10 shadow-lg hover:border-blue-500/40 transition-all space-y-3">
+            <div className="liquid-glass-card p-5 rounded-2xl hover:border-blue-500/40 transition-all space-y-3">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                 <div>
                   <h3 className="text-base font-bold text-white group-hover:text-blue-300 transition-colors">

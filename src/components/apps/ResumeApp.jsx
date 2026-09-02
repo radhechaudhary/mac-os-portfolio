@@ -18,7 +18,7 @@ export default function ResumeApp({ theme }) {
   return (
     <div className={`h-full flex flex-col transition-colors ${isLight ? 'text-slate-900' : 'text-slate-100'}`}>
       {/* Top PDF Controls Bar */}
-      <div className={`flex items-center justify-between p-3 rounded-xl border mb-3 shadow-sm ${isLight ? 'bg-slate-200/80 border-black/10' : 'bg-slate-800/80 border-white/10'
+      <div className={`liquid-glass-card flex items-center justify-between p-3 rounded-xl mb-3 ${isLight ? 'liquid-glass-card-light' : ''
         }`}>
         <div className="flex items-center space-x-2.5">
           <div className="p-2 rounded-lg bg-rose-500/20 text-rose-500">

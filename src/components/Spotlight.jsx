@@ -32,8 +32,8 @@ export default function Spotlight({ isOpen, onClose, onOpenApp, apps }) {
   const matchedProjects = projects.filter(p => p.title.toLowerCase().includes(query.toLowerCase()) || p.tags.some(t => t.toLowerCase().includes(query.toLowerCase())));
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-24 px-4 bg-black/50 backdrop-blur-md animate-in fade-in duration-150">
-      <div className="w-full max-w-xl rounded-2xl bg-slate-900/90 border border-white/20 shadow-2xl overflow-hidden backdrop-blur-2xl text-slate-100">
+    <div className="fixed inset-0 z-[1000] flex items-start justify-center pt-24 px-4 bg-black/50 backdrop-blur-md animate-in fade-in duration-150">
+      <div className="w-full max-w-xl rounded-2xl liquid-glass liquid-glass-dark overflow-hidden text-slate-100">
         {/* Input Bar */}
         <div className="relative border-b border-white/10 flex items-center px-4">
           <Search className="w-5 h-5 text-slate-400 mr-3" />
@@ -68,7 +68,7 @@ export default function Spotlight({ isOpen, onClose, onOpenApp, apps }) {
                 >
                   <div className="flex items-center space-x-3">
                     <div className={`p-1.5 rounded-lg bg-gradient-to-tr ${app.color} text-white`}>
-                      {app.icon}
+                      <img src = {app.icon} alt={app.title} className="w-4 h-4" />  
                     </div>
                     <span>{app.title}</span>
                   </div>

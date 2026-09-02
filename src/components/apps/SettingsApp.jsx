@@ -43,8 +43,8 @@ export default function SettingsApp({
       )}
 
       {/* Header Banner */}
-      <div className={`flex items-center space-x-3 p-4 rounded-2xl border shadow-lg ${
-        isLight ? 'bg-slate-200/80 border-black/10' : 'bg-slate-800/80 border-white/10'
+      <div className={`liquid-glass-card flex items-center space-x-3 p-4 rounded-2xl ${
+        isLight ? 'liquid-glass-card-light' : ''
       }`}>
         <div className="p-3 rounded-xl bg-blue-500/20 text-blue-500">
           <Settings className="w-6 h-6 animate-spin-slow" />
@@ -56,8 +56,8 @@ export default function SettingsApp({
       </div>
 
       {/* Wallpaper Switcher Section */}
-      <div className={`p-5 rounded-2xl border shadow-lg space-y-3 ${
-        isLight ? 'bg-slate-200/60 border-black/10' : 'bg-slate-800/60 border-white/10'
+      <div className={`liquid-glass-card p-5 rounded-2xl space-y-3 ${
+        isLight ? 'liquid-glass-card-light' : ''
       }`}>
         <h3 className="text-sm font-bold flex items-center gap-2">
           <Image className="w-4 h-4 text-purple-500" />
@@ -102,8 +102,8 @@ export default function SettingsApp({
       {/* System Audio & Theme Settings */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Sound Toggle */}
-        <div className={`p-4 rounded-xl border flex items-center justify-between shadow-lg ${
-          isLight ? 'bg-slate-200/60 border-black/10' : 'bg-slate-800/60 border-white/10'
+        <div className={`liquid-glass-card p-4 rounded-xl flex items-center justify-between ${
+          isLight ? 'liquid-glass-card-light' : ''
         }`}>
           <div className="flex items-center space-x-3">
             <div className="p-2.5 rounded-lg bg-indigo-500/20 text-indigo-500">
@@ -130,8 +130,8 @@ export default function SettingsApp({
         </div>
 
         {/* Desktop Appearance Theme Toggle */}
-        <div className={`p-4 rounded-xl border flex items-center justify-between shadow-lg ${
-          isLight ? 'bg-slate-200/60 border-black/10' : 'bg-slate-800/60 border-white/10'
+        <div className={`liquid-glass-card p-4 rounded-xl flex items-center justify-between ${
+          isLight ? 'liquid-glass-card-light' : ''
         }`}>
           <div className="flex items-center space-x-3">
             <div className="p-2.5 rounded-lg bg-amber-500/20 text-amber-500">

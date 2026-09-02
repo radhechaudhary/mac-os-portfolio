@@ -7,7 +7,7 @@ export default function AboutThisMacModal({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md animate-in fade-in duration-150">
-      <div className="w-full max-w-md rounded-2xl bg-slate-900/90 border border-white/20 shadow-2xl p-6 text-slate-100 relative space-y-5 backdrop-blur-2xl">
+      <div className="w-full max-w-md rounded-2xl liquid-glass liquid-glass-dark p-6 text-slate-100 relative space-y-5">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-1 rounded-full hover:bg-white/10 text-slate-400 hover:text-white transition-colors"

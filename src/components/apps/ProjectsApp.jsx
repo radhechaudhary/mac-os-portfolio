@@ -43,7 +43,7 @@ export default function ProjectsApp() {
             placeholder="Search projects or tech stack..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 rounded-xl bg-slate-800/80 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-9 pr-3 py-1.5 rounded-xl liquid-glass-input text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
@@ -68,7 +68,7 @@ export default function ProjectsApp() {
         </div>
 
         {/* View Mode Toggle */}
-        <div className="hidden sm:flex items-center space-x-1 bg-slate-800/80 p-1 rounded-lg border border-white/10">
+        <div className="hidden sm:flex items-center space-x-1 liquid-glass-well p-1 rounded-lg">
           <button
             onClick={() => setViewMode('grid')}
             className={`p-1 rounded ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}
@@ -97,7 +97,7 @@ export default function ProjectsApp() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group rounded-xl bg-slate-800/60 border border-white/10 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+              className="liquid-glass-card group rounded-xl overflow-hidden transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Image Cover */}
@@ -178,7 +178,7 @@ export default function ProjectsApp() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="p-3 rounded-xl bg-slate-800/60 border border-white/10 flex items-center justify-between hover:bg-slate-800 transition-colors"
+              className="liquid-glass-card p-3 rounded-xl flex items-center justify-between transition-colors"
             >
               <div className="flex items-center space-x-3">
                 <img src={project.image} alt={project.title} className="w-12 h-12 rounded-lg object-cover" />
@@ -201,7 +201,7 @@ export default function ProjectsApp() {
       {/* Project Details Modal Drawer */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="w-full max-w-2xl rounded-2xl bg-slate-900 border border-white/20 shadow-2xl p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+          <div className="w-full max-w-2xl rounded-2xl liquid-glass liquid-glass-dark p-6 space-y-4 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center space-x-2">
                 <Code2 className="w-5 h-5 text-blue-400" />

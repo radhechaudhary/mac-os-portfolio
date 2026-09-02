@@ -57,7 +57,7 @@ export default function WelcomeApp({ onOpenApp }) {
       </div>
 
       {/* Intro Description */}
-      <div className="bg-slate-800/60 backdrop-blur-md rounded-xl p-5 border border-white/10 shadow-lg">
+      <div className="liquid-glass-card rounded-xl p-5">
         <h2 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
           <Code2 className="w-5 h-5 text-blue-400" />
           Welcome Message
@@ -129,7 +129,7 @@ export default function WelcomeApp({ onOpenApp }) {
       </div>
 
       {/* Bottom CTA Row */}
-      <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-slate-800/40 border border-white/10">
+      <div className="liquid-glass-card flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl">
         <div className="flex items-center space-x-3">
           <a 
             href={personal.github} 
@@ -169,7 +169,7 @@ function QuickCard({ title, desc, icon, bgColor, onClick }) {
   return (
     <button 
       onClick={onClick}
-      className={`p-4 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between group ${bgColor}`}
+      className={`liquid-glass-tint p-4 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between group ${bgColor}`}
     >
       <div className="flex items-center justify-between mb-3">
         <div className="p-2 rounded-lg bg-slate-900/60 shadow-md">

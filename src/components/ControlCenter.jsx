@@ -31,9 +31,9 @@ export default function ControlCenter({
   const isLight = theme === 'light';
 
   return (
-    <div 
-      className={`fixed right-3 top-10 z-50 w-80 rounded-2xl border shadow-2xl p-4 text-xs backdrop-blur-3xl animate-in slide-in-from-top-3 duration-200 space-y-3 transition-colors ${
-        isLight ? 'bg-white/95 text-slate-900 border-black/15' : 'bg-slate-900/90 text-slate-100 border-white/20'
+    <div
+      className={`fixed right-3 top-10 z-50 w-80 rounded-2xl p-4 text-xs liquid-glass animate-in slide-in-from-top-3 duration-200 space-y-3 transition-colors ${
+        isLight ? 'liquid-glass-light text-slate-900' : 'liquid-glass-dark text-slate-100'
       }`}
       onMouseLeave={onClose}
     >

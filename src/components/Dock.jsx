@@ -26,7 +26,7 @@ export default function Dock({
       <motion.div
         onMouseMove={(e) => mouseX.set(e.pageX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className={`pointer-events-auto flex items-end h-16 gap-2 px-3 pb-2 rounded-2xl backdrop-blur-2xl border shadow-2xl dock-container transition-colors ${isLight ? 'bg-white/50 border-white/60 shadow-slate-400/30' : 'bg-slate-900/60 border-white/20 shadow-black/50'
+        className={`pointer-events-auto flex items-end h-16 gap-2 px-3 pb-2 rounded-2xl liquid-glass liquid-glass-refract transition-colors ${isLight ? 'liquid-glass-light' : 'liquid-glass-dark'
           }`}
       >
         {/* Launchpad Icon */}
@@ -116,18 +116,20 @@ function DockIcon({
       whileHover={{ y: -6 }}
       className="relative group flex items-center justify-center focus:outline-none"
     >
-      {/* Icon Content */}
-      {isImageString ? (
-        <motion.img
-          src={icon}
-          alt={title}
-          className="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform"
-        />
-      ) : (
-        <div className={`w-full h-full rounded-xl bg-gradient-to-tr ${bgGradient || 'from-slate-700 to-slate-800'} text-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform ring-1 ring-white/20`}>
-          {icon}
-        </div>
-      )}
+      {/* Icon Content (shine effect clipped to the icon only, not the tooltip) */}
+      <div className="liquid-glass-shine relative w-full h-full rounded-xl overflow-hidden flex items-center justify-center">
+        {isImageString ? (
+          <motion.img
+            src={icon}
+            alt={title}
+            className="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform"
+          />
+        ) : (
+          <div className={`w-full h-full rounded-xl bg-gradient-to-tr ${bgGradient || 'from-slate-700 to-slate-800'} text-white flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform ring-1 ring-white/20`}>
+            {icon}
+          </div>
+        )}
+      </div>
 
       {/* Tooltip Title */}
       <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-slate-950/90 text-white text-xs rounded-md shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none whitespace-nowrap font-medium z-50">

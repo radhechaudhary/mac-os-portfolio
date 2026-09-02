@@ -37,7 +37,7 @@ export default function Launchpad({ apps, onOpenApp, onClose }) {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           autoFocus
-          className="w-full pl-12 pr-4 py-3 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xl backdrop-blur-md"
+          className="w-full pl-12 pr-4 py-3 rounded-2xl liquid-glass liquid-glass-dark text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 

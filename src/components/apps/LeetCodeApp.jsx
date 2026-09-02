@@ -116,7 +116,7 @@ export default function LeetCodeApp({ theme }) {
 
           {/* Search Bar & External Link */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full md:w-auto">
-            <form onSubmit={handleSearchSubmit} className="flex items-center bg-black/40 border border-white/20 rounded-xl overflow-hidden text-xs">
+            <form onSubmit={handleSearchSubmit} className="liquid-glass-well flex items-center rounded-xl overflow-hidden text-xs">
               <input 
                 type="text" 
                 placeholder="Lookup username..." 
@@ -210,7 +210,7 @@ export default function LeetCodeApp({ theme }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             
             {/* Left Card: Total Solved Breakdown */}
-            <div className="md:col-span-1 p-5 rounded-2xl bg-slate-900/80 border border-white/10 flex flex-col justify-between space-y-4">
+            <div className="liquid-glass-card md:col-span-1 p-5 rounded-2xl flex flex-col justify-between space-y-4">
               <div>
                 <h3 className="text-sm font-bold text-slate-200 flex items-center gap-2">
                   <BarChart3 className="w-4 h-4 text-amber-400" />
@@ -234,7 +234,7 @@ export default function LeetCodeApp({ theme }) {
             </div>
 
             {/* Right Card: Individual Difficulty Progress Bars */}
-            <div className="md:col-span-2 p-5 rounded-2xl bg-slate-900/80 border border-white/10 space-y-4">
+            <div className="liquid-glass-card md:col-span-2 p-5 rounded-2xl space-y-4">
               <h3 className="text-sm font-bold text-slate-200">Difficulty Level Detail</h3>
 
               {/* Easy Progress */}
@@ -295,7 +295,7 @@ export default function LeetCodeApp({ theme }) {
               </div>
 
               {/* Celebration Footer */}
-              <div className="pt-2 text-xs text-slate-400 bg-slate-950/60 p-3 rounded-xl border border-white/5 flex items-center justify-between">
+              <div className="liquid-glass-well pt-2 text-xs text-slate-400 p-3 rounded-xl flex items-center justify-between">
                 <span>LeetCode Global Ranking: <strong className="text-amber-400">#{data.ranking.toLocaleString()}</strong></span>
                 <button 
                   onClick={triggerConfetti} 
@@ -333,7 +333,7 @@ export default function LeetCodeApp({ theme }) {
             {data.badges.map((badge) => (
               <div 
                 key={badge.id}
-                className="p-4 rounded-2xl bg-slate-900/80 border border-white/10 hover:border-amber-400/50 transition-all duration-200 flex items-center space-x-3.5 group shadow-lg"
+                className="liquid-glass-card p-4 rounded-2xl hover:border-amber-400/50 transition-all duration-200 flex items-center space-x-3.5 group"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-tr ${badge.color} text-2xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
                   {badge.icon}
@@ -355,7 +355,7 @@ export default function LeetCodeApp({ theme }) {
 
 function StatCard({ label, value, subtext, icon, bgColor }) {
   return (
-    <div className={`p-4 rounded-2xl border flex flex-col justify-between space-y-2 shadow-lg ${bgColor}`}>
+    <div className={`liquid-glass-tint p-4 rounded-2xl border flex flex-col justify-between space-y-2 ${bgColor}`}>
       <div className="flex items-center justify-between">
         <span className="text-[11px] font-semibold opacity-90">{label}</span>
         {icon}

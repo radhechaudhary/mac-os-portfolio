@@ -193,7 +193,7 @@ export default function Desktop({
       {/* Desktop Widgets (Right Side) */}
       <div className="hidden lg:flex flex-col gap-4 absolute top-12 right-6 w-72 pointer-events-none z-10">
         {/* Clock & Weather Widget - Live New Delhi Weather */}
-        <div className={`pointer-events-auto p-4 rounded-2xl backdrop-blur-2xl border shadow-2xl space-y-2 transition-colors ${theme === 'light' ? 'bg-white/60 border-white/40 text-slate-900' : 'bg-slate-900/40 border-white/15 text-white'
+        <div className={`pointer-events-auto p-4 rounded-2xl liquid-glass space-y-2 transition-colors ${theme === 'light' ? 'liquid-glass-light text-slate-900' : 'liquid-glass-dark text-white'
           }`}>
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 opacity-80">
@@ -208,7 +208,7 @@ export default function Desktop({
         </div>
 
         {/* Developer Bio Card Widget */}
-        <div className={`pointer-events-auto p-4 rounded-2xl backdrop-blur-2xl border shadow-2xl space-y-3 transition-colors ${theme === 'light' ? 'bg-white/60 border-white/40 text-slate-900' : 'bg-slate-900/40 border-white/15 text-white'
+        <div className={`pointer-events-auto p-4 rounded-2xl liquid-glass space-y-3 transition-colors ${theme === 'light' ? 'liquid-glass-light text-slate-900' : 'liquid-glass-dark text-white'
           }`}>
           <div className="flex items-center space-x-3">
             <img src={personal.avatar} alt={personal.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-blue-500/50" />

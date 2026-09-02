@@ -31,7 +31,7 @@ export default function EducationApp() {
       {/* Degrees & Certifications Cards */}
       <div className="space-y-4">
         {education.map((edu, idx) => (
-          <div key={idx} className="p-5 rounded-2xl bg-slate-800/60 border border-white/10 shadow-lg space-y-3">
+          <div key={idx} className="liquid-glass-card p-5 rounded-2xl space-y-3">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <div>
                 <h3 className="text-base font-bold text-white flex items-center gap-2">

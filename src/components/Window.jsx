@@ -93,15 +93,9 @@ export default function Window({
         left: posX,
         position: 'fixed'
       }}
-      className={`rounded-xl overflow-hidden flex flex-col transition-shadow duration-200 ${
-        isLight 
-          ? isActive 
-            ? 'bg-slate-100/95 text-slate-900 ring-1 ring-black/20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]' 
-            : 'bg-slate-100/90 text-slate-800 ring-1 ring-black/10 shadow-lg'
-          : isActive 
-            ? 'macos-window-dark bg-slate-900/95 text-slate-100 ring-1 ring-white/25 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)]' 
-            : 'macos-window bg-slate-900/90 text-slate-100 ring-1 ring-white/10 shadow-xl'
-      } backdrop-blur-2xl`}
+      className={`rounded-xl overflow-hidden flex flex-col transition-shadow duration-200 liquid-glass ${
+        isLight ? 'liquid-glass-light text-slate-900' : 'liquid-glass-dark text-slate-100'
+      } ${isActive ? 'liquid-glass-active' : 'opacity-95'}`}
     >
       {/* Title Bar / Header (Draggable Handle) */}
       <div 

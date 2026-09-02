@@ -52,7 +52,7 @@ export default function ContactApp() {
     <div className="flex flex-col md:flex-row h-full text-slate-100 select-text gap-4">
       {/* Sidebar Info Cards */}
       <div className="w-full md:w-64 space-y-3 shrink-0">
-        <div className="p-4 rounded-xl bg-slate-800/80 border border-white/10 space-y-3 shadow-lg">
+        <div className="liquid-glass-card p-4 rounded-xl space-y-3">
           <div className="flex items-center space-x-2 text-blue-400 font-bold text-sm">
             <Mail className="w-4 h-4" />
             <span>Direct Contact</span>
@@ -60,7 +60,7 @@ export default function ContactApp() {
 
           <div className="space-y-1">
             <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Email Address</span>
-            <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900 border border-white/5">
+            <div className="liquid-glass-well flex items-center justify-between p-2 rounded-lg">
               <span className="text-xs font-mono text-slate-200 truncate">{personal.email}</span>
               <button
                 onClick={handleCopyEmail}
@@ -82,7 +82,7 @@ export default function ContactApp() {
         </div>
 
         {/* Social Profiles */}
-        <div className="p-4 rounded-xl bg-slate-800/80 border border-white/10 space-y-2 shadow-lg">
+        <div className="liquid-glass-card p-4 rounded-xl space-y-2">
           <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Social Profiles</span>
           <div className="space-y-1.5 pt-1">
             <a
@@ -125,7 +125,7 @@ export default function ContactApp() {
       </div>
 
       {/* Main Mail Compose Form */}
-      <div className="flex-1 p-5 rounded-2xl bg-slate-800/60 border border-white/10 shadow-lg flex flex-col justify-between">
+      <div className="liquid-glass-card flex-1 p-5 rounded-2xl flex flex-col justify-between">
         {sentSuccess ? (
           <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
             <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/30">
@@ -163,7 +163,7 @@ export default function ContactApp() {
                   placeholder="Krati"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900/80 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 rounded-xl liquid-glass-input text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -175,7 +175,7 @@ export default function ContactApp() {
                   placeholder="krati@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900/80 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 rounded-xl liquid-glass-input text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -187,7 +187,7 @@ export default function ContactApp() {
                 placeholder="Project Collaboration / Opportunity"
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full px-3 py-2 rounded-xl bg-slate-900/80 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 rounded-xl liquid-glass-input text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -199,7 +199,7 @@ export default function ContactApp() {
                 placeholder="Hi Mohit, I loved your portfolio..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-3 py-2 rounded-xl bg-slate-900/80 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                className="w-full px-3 py-2 rounded-xl liquid-glass-input text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
               />
             </div>
 
