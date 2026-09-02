@@ -52,8 +52,8 @@
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0) 24%),
     linear-gradient(155deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.03) 65%);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(40px) saturate(200%);
+  -webkit-backdrop-filter: blur(40px) saturate(200%);
   box-shadow:
     inset 0 1px 0.5px rgba(255, 255, 255, 0.5),
     inset 0 -1px 1px rgba(0, 0, 0, 0.22),
@@ -75,7 +75,7 @@
 .liquid-glass-dark {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 22%),
-    linear-gradient(155deg, rgba(30, 41, 59, 0.55) 0%, rgba(15, 23, 42, 0.35) 65%);
+    linear-gradient(155deg, rgba(30, 41, 59, 0.64) 0%, rgba(15, 23, 42, 0.44) 65%);
 }
 
 /* Focused-window intensified rim + shadow (must win over the two variants above) */
@@ -90,16 +90,18 @@
    menu bar and Dock — where Apple's Liquid Glass bends content behind it. */
 @supports (backdrop-filter: url(#liquid-glass-distortion)) or (-webkit-backdrop-filter: url(#liquid-glass-distortion)) {
   .liquid-glass-refract {
-    backdrop-filter: url(#liquid-glass-distortion) blur(14px) saturate(190%);
-    -webkit-backdrop-filter: blur(14px) saturate(190%);
+    backdrop-filter: url(#liquid-glass-distortion) blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
   }
 }
 
 /* Mid-weight glass panel for in-app content cards */
 .liquid-glass-card {
   position: relative;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 70%);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.025) 70%);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     inset 0 -1px 0 rgba(0, 0, 0, 0.25),
@@ -125,8 +127,10 @@
 
 /* Recessed "well" for nested tiles inside a card (inputs, mini stat rows) */
 .liquid-glass-well {
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, 0.28);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
@@ -138,8 +142,10 @@
 
 /* Text inputs */
 .liquid-glass-input {
-  background: rgba(2, 6, 23, 0.5);
+  background: rgba(2, 6, 23, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
