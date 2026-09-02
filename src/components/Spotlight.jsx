@@ -67,7 +67,7 @@ export default function Spotlight({ isOpen, onClose, onOpenApp, apps }) {
                   className="w-full p-2.5 rounded-xl hover:bg-blue-600/80 text-left flex items-center justify-between text-xs font-semibold text-slate-200 transition-colors group"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className={`p-1.5 rounded-lg bg-gradient-to-tr ${app.color} text-white`}>
+                    <div className={`p-1.5 rounded-lg bg-linear-to-tr ${app.color} text-white`}>
                       <img src = {app.icon} alt={app.title} className="w-4 h-4" />  
                     </div>
                     <span>{app.title}</span>
