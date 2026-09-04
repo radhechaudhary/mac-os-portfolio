@@ -224,7 +224,7 @@ export const PORTFOLIO_DATA = {
     acceptanceRate: "60.66%",
     contributionPoints: 1840,
     reputation: 82,
-    contestRating: 1837,
+    contestRating: 1871,
     globalRanking: "58,964/879,441",
     attendedContests: 25,
     streak: 83,
