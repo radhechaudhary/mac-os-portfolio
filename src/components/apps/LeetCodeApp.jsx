@@ -104,11 +104,11 @@ export default function LeetCodeApp({ theme }) {
                 <span className="px-2 py-0.5 rounded bg-black/30 text-[11px] font-mono text-amber-200 flex items-center gap-1">
                   <Trophy className="w-3 h-3 text-yellow-300" /> Rank #{data.ranking.toLocaleString()}
                 </span>
-                <span className="px-2 py-0.5 rounded bg-black/30 text-[11px] font-mono text-orange-200 flex items-center gap-1">
+                {/* <span className="px-2 py-0.5 rounded bg-black/30 text-[11px] font-mono text-orange-200 flex items-center gap-1">
                   <Flame className="w-3 h-3 text-orange-400" /> {data.streak} Day Streak
-                </span>
+                </span> */}
                 <span className="px-2 py-0.5 rounded bg-purple-950/60 border border-purple-400/30 text-[11px] font-mono text-purple-200 flex items-center gap-1">
-                  ⚔️ Rating {data.contestRating} (Knight)
+                  ⚔️ Rating {Math.floor(data.contestRating)} (Knight)
                 </span>
               </div>
             </div>
@@ -192,14 +192,14 @@ export default function LeetCodeApp({ theme }) {
             />
             <StatCard 
               label="Contest Rating" 
-              value={data.contestRating} 
+              value={Math.floor(data.contestRating)} 
               subtext="Knight Badge (Top 5%)" 
               icon={<Trophy className="w-5 h-5 text-amber-400" />} 
               bgColor="bg-amber-500/10 border-amber-500/20 text-amber-300"
             />
             <StatCard 
               label="Contribution Points" 
-              value={data.contributionPoints} 
+              value={data.contributionPoint} 
               subtext={`${data.reputation} reputation points`} 
               icon={<Zap className="w-5 h-5 text-purple-400" />} 
               bgColor="bg-purple-500/10 border-purple-500/20 text-purple-300"
@@ -229,7 +229,7 @@ export default function LeetCodeApp({ theme }) {
 
               <div className="text-xs text-slate-400 flex justify-between border-t border-white/10 pt-3">
                 <span>Active Days: <strong className="text-white">{data.activeDays}</strong></span>
-                <span>Contests: <strong className="text-white">{data.attendedContests}</strong></span>
+                <span>Contests: <strong className="text-white">{data.contestAttend}</strong></span>
               </div>
             </div>
 

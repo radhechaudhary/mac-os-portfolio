@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Desktop from './components/Desktop';
 import Dock from './components/Dock';
@@ -10,6 +10,20 @@ import { PORTFOLIO_DATA } from './data/portfolioData';
 
 export default function App() {
   const { wallpapers } = PORTFOLIO_DATA;
+
+  useEffect(() => {
+    // Set initial theme based on system preference
+    fetch("https://alfa-leetcode-api.onrender.com/Mohit_Chaudhary_2004/profile")
+      .then(response => response.json())
+      .then ((data)=>{
+        PORTFOLIO_DATA.leetcode = {...PORTFOLIO_DATA.leetcode, ...data};
+      })
+    fetch("https://alfa-leetcode-api.onrender.com/Mohit_Chaudhary_2004/contest")
+      .then(response => response.json())
+      .then ((data)=>{
+        PORTFOLIO_DATA.leetcode = {...PORTFOLIO_DATA.leetcode, ...data};
+      })
+  })
 
   // Applications Configuration with spacious default dimensions & auto-centering
   const APPS = [
